@@ -1,7 +1,10 @@
 </head>
 <body>
 <nav id= "navbar" class = "navbar navbar-light border border-bottom-1">
-    <a href="/" class="btn btn-secondary">Cluck</a>
+  <% if (!username) {%>
     <a href="/" class="btn btn-secondary">Sign In</a>
-   
+  <%} else { %>
+    <a href="/clucks/new" class="btn btn-secondary">New Cluck</a>
+    <a href="/clucks" class="btn btn-secondary">Clucks</a>
+  <% } %>
   </nav>
