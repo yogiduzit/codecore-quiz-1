@@ -7,8 +7,10 @@ const welcomeRouter = require('./routes/welcome.js')
 const cluckRouter = require('./routes/clucks.js');
 const app = express();
 
-app.use('/', welcomeRouter);
 app.use(express.urlencoded({extended: true}));
+
+app.use('/', welcomeRouter);
+
 // Main application
 
 

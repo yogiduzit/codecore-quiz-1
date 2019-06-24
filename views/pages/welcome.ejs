@@ -6,12 +6,12 @@
 <%-include('../partials/navbar')%>
 
 <div class= "form-container border mx-2 my-3 p-2">
-  <form>
+  <form action='/sign_in' method="POST">
   <div class="form-group">
     <label for="exampleInputEmail1">Username</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="eg. Yogiduzit">
+    <input type="text" name="username" class="form-control" placeholder="eg. Yogiduzit">
   </div>
-  <button type="submit" class="btn btn-light border">Submit</button>
+  <input type="submit" class="btn btn-light border" value="Sign In">
   </form>
 </div>
 
