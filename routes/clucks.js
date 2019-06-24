@@ -8,10 +8,14 @@ router.get('/new', (req, res) => {
 });
 
 router.post('/', (req, res) => {
+  let imgURL = "assets/img/placeholder.png"
+  if (req.body.imgURL) {
+    imgURL = req.body.imgURL;
+  }
   knex
   .insert({
     content: req.body.content,
-    img_url: req.body.imgURL,
+    img_url: imgURL,
     username: req.cookies.username
   })
   .into('clucks')
