@@ -1,0 +1,9 @@
+body {
+  min-height: 100vh;
+}
+.welcome-heading {
+  text-align: center;
+}
+.container {
+  flex: 1 !important;
+}

@@ -2,16 +2,20 @@ const express = require('express');
 const logger = require('morgan');
 const methodOverride = require('method-override');
 const path = require('path');
+const cookieParser = require('cookie-parser');
 
-const welcomeRouter = require('./routes/welcome.js')
-const cluckRouter = require('./routes/clucks.js');
+// Main application
 const app = express();
 
-app.use(express.urlencoded({extended: true}));
+// Routers
+const welcomeRouter = require('./routes/welcome.js')
+const cluckRouter = require('./routes/clucks.js');
 
 app.use('/', welcomeRouter);
 
-// Main application
+app.use(cookieParser());
+app.use(express.urlencoded({extended: true}));
+
 
 
 // Load all the static assets
