@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const cookieParser = require('cookie-parser');
+const knex = require('../db/client');
 
 const COOKIE_MAX_AGE = 7 * 24 * 60 * 60 * 1000;
 
@@ -20,7 +21,11 @@ router.use((req, res, next) => {
 
 router.get('/', (req, res) => {
   const username = res.locals.username;
-  res.render('pages/welcome', {username});
+  if (!username) {
+    res.render('pages/welcome', {username});
+  } else {
+    res.redirect('/clucks');
+  }
 });
 
 router.post('/sign_in', (req, res) => {
