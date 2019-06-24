@@ -30,4 +30,9 @@ router.post('/sign_in', (req, res) => {
   res.redirect('/');
 });
 
+router.post('/sign_out', (req, res) => {
+  res.clearCookie('username');
+  res.redirect('/');
+});
+
 module.exports = router;
