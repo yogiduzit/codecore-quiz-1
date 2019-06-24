@@ -1,0 +1,17 @@
+<%-include('../partials/header')%>
+<title>Clucks</title>
+<%-include('../partials/navbar')%>
+<section>
+  <% for (let cluck of clucks) { %>
+    <div class=cluck-container-<%= cluck.id %>>
+      <div class= 'image-container'>
+        <img src= <%= cluck.img_url  %> alt="">
+      </div>
+      <div class= 'body'>
+        <h3 class='cluck-header h3'><%= cluck.username + "\u2045" + cluck.created_at%></h3>
+        <p class='content'><%= cluck.content%></p>
+      </div>
+    </div>
+  <% } %>
+</section>
+<%-include('../partials/footer')%>
