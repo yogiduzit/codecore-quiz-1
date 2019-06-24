@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const knex = require('../db/client');
-
+const ejslint = require('ejs-lint');
 
 router.get('/new', (req, res) => {
   res.render('pages/new');
@@ -31,3 +31,4 @@ router.get('/', (req, res) => {
   });
 });
 module.exports = router;
+
