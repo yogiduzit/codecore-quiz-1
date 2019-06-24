@@ -12,6 +12,7 @@ const welcomeRouter = require('./routes/welcome.js')
 const cluckRouter = require('./routes/clucks.js');
 
 app.use('/', welcomeRouter);
+app.use('/clucks', cluckRouter);
 
 app.use(cookieParser());
 app.use(express.urlencoded({extended: true}));
