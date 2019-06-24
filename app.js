@@ -8,7 +8,7 @@ const cluckRouter = require('./routes/clucks.js');
 const app = express();
 
 app.use('/', welcomeRouter);
-
+app.use(express.urlencoded({extended: true}));
 // Main application
 
 
