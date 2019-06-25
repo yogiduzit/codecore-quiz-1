@@ -20,8 +20,10 @@ body {
   width: 30vw;
   display: flex;
   position: sticky;
+  flex-direction: column;
   height: 50vh;
   top: 85px;
+  align-items: center;
 }
 .clucks-container {
   width: 60vw;

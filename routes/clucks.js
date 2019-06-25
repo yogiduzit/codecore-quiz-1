@@ -70,10 +70,17 @@ router.get('/', (req, res) => {
       for (let cluck of newClucks) {
         cluck.easyCreatedAt = dateParser(dateConverter(cluck.created_at));
       }
-      knex.select()
-      res.render('pages/clucks', {
-        newClucks: newClucks
-      });
+      knex('hashtags')
+      .select('*')
+      .orderBy('count', 'desc')
+      .limit(10)
+      .then(hashtags => {
+        res.render('pages/clucks', {
+          newClucks: newClucks,
+          hashtags: hashtags
+        });
+      })
+      
     });
 });
 

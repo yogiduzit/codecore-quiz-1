@@ -21,6 +21,9 @@
     
     <aside class=" mt-2 popular-tags-container border">
       <h3 class="h3 pt-2 trending-heading">Trending Clucks</h3>
+      <% for (let hashtag of hashtags) {%>
+      <p><%= hashtag.hashtag + " - " + hashtag.count%></p>
+      <% } %>
     </aside>
     </div>
 <%-include('../partials/footer')%>
