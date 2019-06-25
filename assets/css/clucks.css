@@ -1,0 +1,45 @@
+body {
+  display: flex;
+  flex-direction: column;
+}
+.main-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.navbar {
+  width: 100vw;
+  position: sticky;
+  top: 0px;
+  background-color: white;
+}
+.brand-image-container {
+  flex: 1;
+}
+.popular-tags-container {
+  width: 30vw;
+  display: flex;
+  position: sticky;
+  height: 50vh;
+  top: 85px;
+}
+.clucks-container {
+  width: 60vw;
+}
+.cluck-container {
+  display: flex;
+  flex-direction: row;
+  min-height: 20vw;
+}
+.prfl-pic {
+  width: 10vmax;
+  height: 10vmax;
+}
+.cluck-img {
+  width: 200px;
+  height: 200px;
+}
+.trending-heading {
+  text-align: center;
+  width: 100%;
+}
