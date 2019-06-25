@@ -117,5 +117,3 @@ typings/
 .dynamodb/
 
 # End of https://www.gitignore.io/api/web,node,macos
-
-bootstrap-4.3.1-dist/
