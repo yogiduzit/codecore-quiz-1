@@ -117,16 +117,6 @@ typings/
 .dynamodb/
 
 ### Web ###
-*.asp
-*.cer
-*.csr
-*.css
-*.htm
-*.html
-*.js
-*.jsp
-*.php
-*.rss
-*.xhtml
+bootstrap-4.3.1-dist/
 
 # End of https://www.gitignore.io/api/web,node,macos
