@@ -1,0 +1,21 @@
+<%-include('../partials/header')%>
+<title>New Cluck</title>
+<link rel="stylesheet" href="../assets/css/newCluck.css">
+
+<%-include('../partials/navbar')%>
+<section>
+  <div class="form-container border mt-4 mx-2 p-2">
+    <form action="/clucks" method="POST">
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Content</label>
+        <textarea name="content" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Whatchoo cluckin about"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Image URL</label>
+        <input type="text" name="imgURL" class="form-control" id="exampleFormControlInput1" placeholder="https://....">
+      </div>
+      <input type="submit" class= "btn btn-light border" value="Cluck">
+    </form>
+  </div>
+</section>
+<%-include('../partials/footer')%>

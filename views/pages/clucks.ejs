@@ -1,0 +1,29 @@
+<%-include('../partials/header')%>
+<title>Clucks</title>
+<link rel="stylesheet" href="assets/css/clucks.css">
+<%-include('../partials/navbar')%>
+  <div class="main-container">
+    <section class='clucks-container'>
+      <% for (let cluck of newClucks) { %>
+        <div class=' m-2 border cluck-container'>
+          <div class= 'prfl-img-container'>
+            <img class="prfl-pic mt-2 ml-2" src="assets/img/doge.jpeg" alt="">
+          </div>
+          <div class= 'body pl-2'>
+            <p class='cluck-header p text-dark'><%= cluck.username + " \u2022 " + cluck.easyCreatedAt%></p>
+            <p class = "created_at p text-dark"></p>
+            <p class='content text-secondary'><%= cluck.content%></p>
+            <img class=" border mb-2 cluck-img" src= <%= cluck.img_url  %> alt="">
+          </div>
+        </div>
+      <% } %>
+    </section>
+    
+    <aside class=" mt-2 popular-tags-container border">
+      <h3 class="h3 pt-2 trending-heading">Trending Clucks</h3>
+      <% for (let hashtag of hashtags) {%>
+      <p><%= hashtag.hashtag + " - " + hashtag.count%></p>
+      <% } %>
+    </aside>
+    </div>
+<%-include('../partials/footer')%>

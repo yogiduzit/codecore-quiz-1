@@ -1,0 +1,9 @@
+.navbar {
+  width: 100vw;
+  position: sticky;
+  top: 0px;
+  background-color: white;
+}
+.brand-image-container {
+  flex: 1;
+}

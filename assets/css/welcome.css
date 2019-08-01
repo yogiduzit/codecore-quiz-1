@@ -1,0 +1,18 @@
+body {
+  min-height: 100vh;
+}
+.welcome-heading {
+  text-align: center;
+}
+.container {
+  flex: 1 !important;
+}
+.navbar {
+  width: 100vw;
+  position: sticky;
+  top: 0px;
+  background-color: white;
+}
+.brand-image-container {
+  flex: 1;
+}

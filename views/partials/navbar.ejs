@@ -1,0 +1,21 @@
+</head>
+<body>
+<nav id= "navbar" class = "navbar navbar-light border border-bottom-1">
+  <div class="brand-image-container">
+    <a href="/clucks" >
+      <img src="../assets/img/brand.png" alt="Baby Chicken" style="width:50px; height:50px">
+    </a>
+  </div>
+  <% if (!username) {%>
+    <a href="/" class="btn btn-secondary">Sign In</a>
+  <%} else { %>
+    <a href="/clucks/new" class="btn btn-secondary pr-3">Cluck!</a>
+    <p class="pt-3 px-3"><%= "\u2022 " +  username + " \u2022" %> </p>
+
+    <div class='form-container pr-2'>
+      <form action="/sign_out" method="POST">
+        <input type="submit" class= 'btn btn-secondary' value="Sign Out">
+      </form>
+    </div>
+  <% } %>
+  </nav>

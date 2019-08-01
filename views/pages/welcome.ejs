@@ -1,0 +1,26 @@
+<%-include('../partials/header')%>
+
+<title>Welcome</title>
+<link rel="stylesheet" href="assets/css/welcome.css">
+
+<%-include('../partials/navbar')%>
+  <section class="container flex-grow-1">
+    <% if (!username) {%>
+      <div class= "form-container border mx-2 my-3 p-2">
+        <form action='/sign_in' method="POST">
+        <div class="form-group">
+          <label for="userName">Username</label>
+          <input type="text" name="username" class="form-control" id="userName" placeholder="eg. Yogiduzit">
+        </div>
+        <input type="submit" class="btn btn-light border" value="Sign In">
+        </form>
+      </div>
+      <%} else {%>
+        <h2 class = "welcome-heading h2">Welcome <%= username %></h2>
+        <form action="/sign_out" method="POST">
+         <input type="submit" class="btn btn-light border" value="Sign Out">
+        </form>
+      <%}%>
+    </section>
+
+<%-include('../partials/footer')%>
